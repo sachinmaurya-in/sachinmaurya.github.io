@@ -1,58 +1,86 @@
-/* font ccolor #574455 */
-/* bg colour #eae8e5 */
-/* face colur #a7857d */
-/* icon colur #ebbacf */
+/* color palette
+#574455 - primary
+#eae8e5 - background
+#a7857d - accent
+#ebbacf - highlight
+*/
 
 * {
     margin: 0;
+    padding: 0;
     box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+    overflow-x: hidden;
 }
 
 body {
     background-color: #eae8e5;
     color: #574455;
-
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
 }
 
+/* top cover */
 .cover {
     background: #574455;
     height: 7rem;
-    border-radius: 0px 0px 20px 20px;
-    box-shadow: 0px 5px 10px 0px #ebbacf;
+    border-radius: 0 0 20px 20px;
+    box-shadow: 0 5px 10px #ebbacf;
 }
 
+/* main container */
 .contener {
+    max-width: 420px;     /* ✅ MOST IMPORTANT */
+    width: 100%;
+    margin: auto;
+    padding: 0 16px 32px;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
+/* profile image */
 .logo {
-    margin-top:-3.5rem;
+    margin-top: -3.5rem;
     height: 5.5rem;
-    width: 5.5rem;  
+    width: 5.5rem;
     border-radius: 50%;
-    box-shadow: 0px 0px 10px 0px #ebbacf;
+    box-shadow: 0 0 10px #ebbacf;
 }
-.bio  {
-   margin: 5px 30px 5px 30px; 
+
+/* bio text */
+.bio {
+    margin: 8px 0;
+    text-align: center;
+    font-size: 0.95rem;
+    line-height: 1.4;
 }
-.link{
-    margin-top: 2.2rem;
+
+/* links section */
+.link {
+    width: 100%;
+    margin-top: 2rem;
 }
-.btn{
+
+/* buttons */
+.btn {
+    width: 100%;          /* ✅ responsive */
+    max-width: 320px;
     height: 2.8rem;
-    width: 17rem;
     background: #574455;
-    margin-top: 8px;
+    margin: 8px auto 0;
     border-radius: 20px;
     color: #eae8e5;
     display: flex;
     align-items: center;
     justify-content: center;
-    text-decoration-line: none;
+    text-decoration: none;
+    transition: 0.2s ease;
 }
-.btn:hover{
+
+.btn:hover {
     background-color: #ebbacf;
     color: #574455;
 }
